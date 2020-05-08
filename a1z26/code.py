@@ -15,7 +15,7 @@ number2letter: Dict[int, str] = {
 
 def encode_unit(unit: str) -> str:
     """Encodes a single unit of plaintext to ciphertext."""
-    return str(letter2number.get(char.lower(), char))
+    return str(letter2number.get(unit.lower(), unit))
 
 def decode_unit(unit: str) -> str:
     """Decodes a single unit of ciphertext to plaintext."""
@@ -26,7 +26,7 @@ def decode_unit(unit: str) -> str:
 
 def encode(plaintext: str, separator: str=" ") -> str:
     """Encodes plaintext to ciphertext."""
-    return separator.join(map(encode_unit, text))
+    return separator.join(map(encode_unit, plaintext))
 
 def decode(ciphertext: str, separator: str=" ") -> str:
     """Decodes ciphertext to plaintext."""
