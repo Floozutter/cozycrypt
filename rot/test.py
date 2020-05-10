@@ -8,7 +8,7 @@ import code
 from functools import partial
 
 
-class TestDecoding(unittest.TestCase):
+class TestCoding(unittest.TestCase):
     def test_rot13_chicken(self):
         rot13 = partial(code.rotate, 13)
         a = "Why did the chicken cross the road? Gb trg gb gur bgure fvqr!"
